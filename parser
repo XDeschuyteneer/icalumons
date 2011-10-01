@@ -1,0 +1,157 @@
+#!/usr/bin/qpython -W ignore::DeprecationWarning
+# -*- encoding: utf-8 -*-
+
+from icalendar import Calendar, Event, UTC
+from datetime import datetime
+import tempfile, os, sys, getopt
+
+class Cours:
+    def __init__(self):
+        pass
+class Heure:
+    def __init__(self,h,m):
+        self.h = int(h)
+        self.m = int(m)
+
+class Heures:
+    def __init__(self, h1, h2):
+        tmp1 = h1.split(":")
+        tmp2 = h2.split(":")
+        self.start = Heure(tmp1[0], tmp1[1])
+        self.end = Heure(tmp2[0], tmp2[1])
+
+class Date:
+    def __init__(self,d,m,y):
+        self.d = int(d)
+        self.m = int(m)
+        self.y = int(y)
+
+def parse(fichier):
+    cours = []
+    c = Cours()
+    last_date = ""
+    last_day = ""
+
+    for ligne in fichier:
+        line = ligne.strip().split('<td valign="top" width="30%" align="center">')
+        if not line[0]:
+            c.prof = line[1].split('</td')[0]
+        tmp = line[0].split('<td valign="top" width="20%" align="center">')
+        tmp = tmp[0].split('<td valign="top" width="35%"><u>')
+        if len(tmp) > 1 and not tmp[0]:
+            c.cours = tmp[1].split("</u>")[0]
+        tmp = line[0].split('"center">')
+        if len(tmp) > 1 and not tmp[0]:
+            heures = tmp[1].split('<br />')[0].split("-")
+            c.heures = Heures(heures[0], heures[1])
+        tmp = line[0].split('<td class="jour" colspan="4" height="25" align="left"><b>')
+        if len(tmp) > 1 and not tmp[0]:
+            c.jours = tmp[1]
+            last_day = c.jours
+        tmp = line[0].split('<td valign="top" width="20%" align="center">')
+        if len(tmp) > 1 and not tmp[0]:
+            c.salle = tmp[1].split('</td>')[0]
+            try:
+                c.jours
+            except:
+                c.jours = last_day
+                c.date = last_date
+            cours.append(c)
+            c = Cours()
+        tmp = line[0].split('</b></td>')
+        if len(tmp) > 1 and not tmp[1]:
+            tmp = tmp[0].split("/")
+            c.date = Date(tmp[0], tmp[1], tmp[2])
+            last_date = c.date
+        tmp = line[0].split('</td>')
+        if len(tmp) > 1 and not tmp[1]:
+            tmp = tmp[0].split('<br />')
+            if len(tmp) == 1 and len(tmp[0]) == 4:
+                c.type = tmp[0]
+    return cours
+
+def construct_cal(cours):
+    cal = Calendar()
+    cal.add('prodid', "My cal")
+    cal.add('version', "0.1")
+    
+    lessons = list(set(map((lambda c: c.type + " - " + c.cours), cours)))
+    ids = range(len(lessons))
+    dico = dict(zip(lessons,ids))
+        
+    for c in cours:
+        if not (dico[c.type + " - " + c.cours] in ids_to_delete):
+            event = Event()
+            event.add('summary', c.type + " - " + c.cours)
+            d = c.date
+            h = c.heures.start
+            event.add('dtstart', datetime(d.y, d.m, d.d,
+                                          h.h, h.m, 0))
+            h = c.heures.end
+            event.add('dtend',datetime(d.y, d.m, d.d,
+                                       h.h, h.m, 0))
+            event.add('organizer', c.prof)
+            event.add('location', c.salle)
+            cal.add_component(event)
+    return cal
+
+def main():
+    fichier = open(file)
+    cours = parse(fichier)
+    if only_show_lessons:
+        lessons = list(set(map((lambda c: c.type + " - " + c.cours), cours)))
+        for i, lesson in enumerate(lessons):
+            print i, ")", lesson 
+    else:
+        cal = construct_cal(cours)     
+        directory = tempfile.mkdtemp()
+        f = open(output, 'wb')
+        f.write(cal.as_string())
+        f.close()
+
+
+def usage():
+    print ""
+    print "Usage: parser [OPTIONS]"
+    print ""
+    print "\t-h, --help\t\tShow help message and exit"
+    print "\t-l, --list\t\tList all the Lessons with their ID, conflicts with -o and -F"
+    print "\t-F, --filter\tparser -f 1-4-5 delete lessons with ID 1,4 and 5"
+    print "\t-f, --file\t\tpath to the html file"
+    print "\t-o, --output\tpath to the ics file to render, if not specified, write in the cal.ics file, in the current directory"
+    
+if __name__ == "__main__":
+    try:
+        opts, args = getopt.getopt(sys.argv[1:], "hlf:F:o:",
+                                   ["help", "list", "filter","file","output"])
+    except getopt.GetoptError, err:
+        print str(err)
+        usage()
+        sys.exit(2)
+    global only_show_lessons
+    global ids
+    global file
+    global output
+    only_show_lessons = False
+    ids_to_delete = []
+    file = ""
+    output = "cal.ics"
+    for o, a in opts:
+        if o in ("-h", "--help"):
+            usage()
+            sys.exit(0)
+        elif o in ("-l", "--list"):
+            only_show_lessons = True
+        elif o in ("-F", "--filter"):
+            ids_to_delete = map(int,a.split("-"))
+        elif o in ("-f", "--file"):
+            file = a
+        elif o in ("-o", "--output"):
+            output = a
+        else:
+            assert False, "unhandled option"
+    if file:
+        main()
+    else:
+        print "need an input file, type --help or -h for help"
+        sys.exit(0)
