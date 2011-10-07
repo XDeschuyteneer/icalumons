@@ -2,7 +2,8 @@
 # Python 2.5
 
 # HTML utility functions.
-#  Copyright (C) 2009 Pierre Hauweele <antegallya@gmail.com>, GPLv3
+#    Copyright (C) 2009,2010,2011
+#            Pierre Hauweele <pierre.hauweele@clubinfo-umons.be>, GPLv3
 #    This file is part of UMonsTimesheetGrabber.
 #
 #    UMonsTimesheetGrabber is free software: you can redistribute it and/or

@@ -3,8 +3,9 @@
 # Python 2.5
 
 # UMonsTimesheetGrabber.
-#   Grab UMons' timesheet(s), save them, parse them, do things with them... 
-#  Copyright (C) 2009 Pierre Hauweele <antegallya@gmail.com>, GPLv3
+#   Grab UMons' timesheet(s), save them, parse them, do things with them...
+#    Copyright (C) 2009,2010,2011
+#             Pierre Hauweele <pierre.hauweele@clubinfo-umons.be>, GPLv3
 #    This file is part of UMonsTimesheetGrabber.
 #
 #    UMonsTimesheetGrabber is free software: you can redistribute it and/or
