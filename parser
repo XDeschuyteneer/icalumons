@@ -1,6 +1,27 @@
 #!/usr/bin/python -W ignore::DeprecationWarning
 # -*- encoding: utf-8 -*-
 
+# File: parser
+#   Time-stamp: <2011-10-07 20:06:07 gawen>
+#
+#   Copyright (C) 2011
+#            Xavier Deschuyteneer <xavier.deschuyteneer@clubinfo-umons.be>
+#            David Hauweele       <david.hauweele@clubinfo-umons.be>
+#            Pierre Hauweele      <pierre.hauweele@clubinfo-umons.be>
+#
+#   This program is free software: you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation, either version 3 of the License, or
+#   (at your option) any later version.
+#
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with this program. If not, see <http://www.gnu.org/licenses/>.
+
 from icalendar import Calendar, Event, UTC
 from datetime import datetime
 import tempfile, os, sys, getopt, pytz
@@ -15,7 +36,7 @@ class Cours:
         self.prof = None
         self.salle = None
         self.cours = None
-        
+
     def __str__(self):
         return (str(self.date) + "\n" +
                 str(self.heures) + "\n" +
@@ -45,7 +66,7 @@ class Date:
         self.d = int(d)
         self.m = int(m)
         self.y = int(y)
-        
+
     def __str__(self):
         return str(self.d) + "/" + str(self.m) + "/" + str(self.y)
 
@@ -118,7 +139,7 @@ def construct_cal(cours):
     lessons = list(set(map((lambda c: c.type + " - " + c.cours), cours)))
     ids = range(len(lessons))
     dico = dict(zip(lessons,ids))
-    
+
     timezone = pytz.timezone("Europe/Brussels")
 
     for c in cours:
