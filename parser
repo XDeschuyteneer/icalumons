@@ -5,15 +5,30 @@ from icalendar import Calendar, Event, UTC
 from datetime import datetime
 import tempfile, os, sys, getopt
 
-
+#some objects to make it easier to use
 
 class Cours:
     def __init__(self):
-        pass
+        self.date = None
+        self.type = None
+        self.heures = None
+        self.prof = None
+        self.salle = None
+        self.cours = None
+        
+    def __str__(self):
+        return (str(self.date) + "\n" +
+                str(self.heures) + "\n" +
+                self.type + " -  " + self.cours + "\n" +
+                "\t" + self.salle + " avec " + self.prof)
+
 class Heure:
     def __init__(self,h,m):
         self.h = int(h)
         self.m = int(m)
+
+    def __str__(self):
+        return str(self.h) + ":" + str(self.m)
 
 class Heures:
     def __init__(self, h1, h2):
@@ -22,13 +37,23 @@ class Heures:
         self.start = Heure(tmp1[0], tmp1[1])
         self.end = Heure(tmp2[0], tmp2[1])
 
+    def __str__(self):
+        return "de " + str(self.start) + " à " + str(self.end)
+
 class Date:
     def __init__(self,d,m,y):
         self.d = int(d)
         self.m = int(m)
         self.y = int(y)
+        
+    def __str__(self):
+        return str(self.d) + "/" + str(self.m) + "/" + str(self.y)
 
 def parse(fichier):
+    """
+    This method take a "good" file object and return a list of Cours objects.
+    See the fetcher to see how good is.
+    """
     cours = []
     c = Cours()
     dernier_jour = ""
@@ -61,7 +86,7 @@ def parse(fichier):
                 if len(tmp[0]) == 4:
                     c.type = tmp[0]
                 else:
-                     #mauvais formatage des horaires
+                     #si jamais il y a plusieurs prof pour un meme cours
                      prof = tmp[0]
         elif len(ligne_cours) == 2:
             nom = ligne_cours[1].split('</u>')[0]
@@ -74,7 +99,7 @@ def parse(fichier):
         elif len(ligne_local) == 2:
             ligne_local = ligne_local[1].split('</td')
             c.salle = ligne_local[0]
-            c.jour = dernier_jour
+            c.date = dernier_jour
             if prof:
                 c.prof = prof + " - " + c.prof
             cours.append(c)
@@ -82,6 +107,10 @@ def parse(fichier):
     return cours
 
 def construct_cal(cours):
+    """
+    Take a list of Cours objects and return an ics calendar object.
+    It take care of the filter.
+    """
     cal = Calendar()
     cal.add('prodid', "My cal")
     cal.add('version', "0.1")
@@ -92,10 +121,10 @@ def construct_cal(cours):
 
     for c in cours:
         if not (dico[c.type + " - " + c.cours] in ids_to_delete):
+            print c
             event = Event()
             intitule = c.type + " - " + c.cours
-            print intitule
-            event.add('summary', intitule)
+            event.add('summary', intitule, encode=0)
             d = c.date
             h = c.heures.start
             event.add('dtstart', datetime(d.y, d.m, d.d,
@@ -103,12 +132,18 @@ def construct_cal(cours):
             h = c.heures.end
             event.add('dtend',datetime(d.y, d.m, d.d,
                                        h.h, h.m, 0))
-            event.add('organizer', c.prof)
-            event.add('location', c.salle)
+            event.add('organizer', c.prof, encode=0)
+            event.add('location', c.salle, encode=0)
+            # set the uid of this event to the hash of the repr of the object
+            # useful for update/delete, and so on
+            event['uid'] = hash(str(c))
             cal.add_component(event)
     return cal
 
 def main():
+    """
+    Open the file, parse the file, construct the calendar and write it.
+    """
     fichier = open(file)
     cours = parse(fichier)
     if only_show_lessons:
