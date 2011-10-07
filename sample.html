@@ -1,105 +1,73 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta name="generator" content=
-"HTML Tidy for Linux (vers 25 March 2009), see www.w3.org" />
-<title>Consultation dynamique des horaires de l'Universit&#233; de
-Mons</title>
+<title>Consultation dynamique des horaires de l'Université de Mons</title>
 <meta name="author" content="Christophe Wansar" />
 <meta name="owner" content="christophe.wansar@umh.ac.be" />
-<meta http-equiv="Content-Type" content=
-"text/html; charset=us-ascii" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="content-language" content="fr" />
 <meta name="robots" content="noindex, nofollow" />
-<link href="index.php_files/default.css" type="text/css" rel=
-"stylesheet" />
-<link href="index.php_files/calendar-blue.css" type="text/css" rel=
-"stylesheet" />
-<script type="text/javascript" src="index.php_files/calendar.js">
-</script>
-<script type="text/javascript" src=
-"index.php_files/calendar-fr.js">
-</script>
-<script type="text/javascript" src=
-"index.php_files/calendar-setup.js">
-</script>
-<script type="text/javascript" src="index.php_files/prototype.js">
-</script>
-<script type="text/javascript" src="index.php_files/index.js">
-</script>
+<link href="css/default.css" type="text/css" rel="stylesheet" />
+<link href="css/calendar-blue.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/jscalendar/calendar.js"></script>
+<script type="text/javascript" src="js/jscalendar/calendar-fr.js"></script>
+<script type="text/javascript" src="js/jscalendar/calendar-setup.js"></script>
+<script type="text/javascript" src="js/prototype.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript">
-//<![CDATA[
         <!--
 var lastdiv = 'onglet1';        //-->
-//]]>
+        
 </script>
-<link rel="shortcut icon" href=
-"https://applications.umons.ac.be/horaires/images/umonslogo.ico"
-type="image/x-icon" />
+<link rel="shortcut icon" href="./images/umonslogo.ico" type="image/x-icon" />
 </head>
 <body>
-<table width="769" cellpadding="0" cellspacing="0" align="center"
-border="0">
-<tbody>
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="769">
 <tr valign="top">
 <td width="100%">
-<table width="100%" cellpadding="0" cellspacing="0" align="center"
-border="0">
-<tbody>
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
 <tr height="30">
-<td><img src="index.php_files/haut_01d.gif" alt="" height="30"
-width="278" border="0" /><img src="index.php_files/haut_02.gif"
-alt="" height="30" width="384" border="0" /><img src=
-"index.php_files/haut_03.gif" alt="" height="30" width="107"
-border="0" /></td>
+<td>
+<img src="images/haut_01d.gif" border="0" height="30" width="278" alt="" />
+<img src="images/haut_02.gif" border="0" height="30" width="384" alt="" />
+<img src="images/haut_03.gif" border="0" height="30" width="107" alt="" />
+</td>
 </tr>
 <tr>
 <td class="titre">
-<table height="6" width="769" cellpadding="2" cellspacing="0"
-border="0">
-<tbody>
+<table width="769" height="6" cellspacing="0" cellpadding="2" border="0">
 <tr>
 <td width="200" bgcolor="#A80039">Horaires des cours UMONS</td>
-<td width="569" align="right" bgcolor="#00ABCC"><a class="banniere"
-href="https://applications.umons.ac.be/horairepers/">Intranet
-horaires</a>&nbsp;</td>
+<td width="569" bgcolor="#00ABCC" align="right">
+<a class="banniere" href="https://applications.umons.ac.be/horairepers/">Intranet horaires</a> </td>
 </tr>
-</tbody>
 </table>
 </td>
 </tr>
-</tbody>
 </table>
 </td>
 </tr>
 <tr>
 <td height="40" valign="bottom">
-<table width="100%" cellpadding="0" cellspacing="0" align="center"
-border="0">
-<tbody>
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
 <td class="tdcalendar2"></td>
 </tr>
-</tbody>
 </table>
 </td>
 </tr>
 <tr>
 <td>
 <form action="index.php" method="post" name="formrech">
-<table class="tabonglet" width="100%" align="center" border="0">
-<tbody>
+<table class="tabonglet" align="center" width="100%" border="0">
 <tr>
-<td height="60" valign="top" width="65%">
-<div id="haut" style=
-"position:relative;top:0px; left:0px;z-index:0;">
-<div id="onglet1" style=
-"position:absolute;top:0px; left:0px;visibility:visible;z-index:auto;">
-<table summary="" cellpadding="0" cellspacing="0" border="0">
-<tbody>
+<td height="60" width="65%" valign="top">
+<div id="haut" style="position:relative;top:0px; left:0px;z-index:0;">
+<div id="onglet1" style="position:absolute;top:0px; left:0px;visibility:visible;z-index:auto;">
+<table border="0" cellspacing="0" cellpadding="0" summary="">
 <tr>
 <td height="30" width="100" align="right">Nom Formation :</td>
-<td height="30">&nbsp;<select name="formation" onchange=
-"changement_formation();">
+<td height="30"> 
+<select name="formation" onchange="changement_formation();">
 <option value="1">Agregation Bio - FS</option>
 <option value="2">Agregation Chimie - FS</option>
 <option value="3">Agregation FPSE - FPSE</option>
@@ -120,23 +88,17 @@ border="0">
 <option value="17">Annee prepa M SG 60 CLR Jour - FWEG</option>
 <option value="18">Annee prepa M SG 60 CLR soir - FWEG</option>
 <option value="19">Annee prepa M SG 60 Mons - FWEG</option>
-<option value="20">Annee prepa Master Pol eco&amp;soc -
-FWEG</option>
-<option value="209">BA1 Ing&#233;nieur Civil - FPMS</option>
-<option value="210">BA1 Ing&#233;nieur Civil Architecte -
-FPMS</option>
-<option value="211">BA2 Ing&#233;nieur Civil - FPMS</option>
-<option value="212">BA2 Ing&#233;nieur Civil Architecte -
-FPMS</option>
-<option value="214">BA3 Ing&#233;nieur Civil Architecte -
-FPMS</option>
-<option value="215">BA3 Ing&#233;nieur Civil Chimie - SDM -
-FPMS</option>
-<option value="216">BA3 Ing&#233;nieur Civil Elec - FPMS</option>
-<option value="217">BA3 Ing&#233;nieur Civil IG - FPMS</option>
-<option value="218">BA3 Ing&#233;nieur Civil M&#233;canicien -
-FPMS</option>
-<option value="219">BA3 Ing&#233;nieur Civil Mines - FPMS</option>
+<option value="20">Annee prepa Master Pol eco&soc - FWEG</option>
+<option value="209">BA1 Ingénieur Civil - FPMS</option>
+<option value="210">BA1 Ingénieur Civil Architecte - FPMS</option>
+<option value="211">BA2 Ingénieur Civil - FPMS</option>
+<option value="212">BA2 Ingénieur Civil Architecte - FPMS</option>
+<option value="214">BA3 Ingénieur Civil Architecte - FPMS</option>
+<option value="215">BA3 Ingénieur Civil Chimie - SDM - FPMS</option>
+<option value="216">BA3 Ingénieur Civil Elec - FPMS</option>
+<option value="217">BA3 Ingénieur Civil IG - FPMS</option>
+<option value="218">BA3 Ingénieur Civil Mécanicien - FPMS</option>
+<option value="219">BA3 Ingénieur Civil Mines - FPMS</option>
 <option value="267">Bac 1 Archi - FA+U</option>
 <option value="21">Bac 1 Bio - FS</option>
 <option value="22">Bac 1 Biomed - FMP</option>
@@ -215,26 +177,16 @@ FPMS</option>
 <option value="130">IG 3 - FWEG</option>
 <option value="132">M BBMC 1 an - FS</option>
 <option value="133">M compl peda univ et ens sup - FPSE</option>
-<option value="194">M Compl Sci Lang - Didac Lang - Pr -
-ISL</option>
-<option value="193">M Compl Sci Lang - Didac Lang - Sc -
-ISL</option>
-<option value="200">M Compl Sci Lang - Interp Conf - Pr -
-ISL</option>
-<option value="196">M Compl Sci Lang - Lang Civ Sc - Pr -
-ISL</option>
-<option value="195">M Compl Sci Lang - Lang Cogn - Sc -
-ISL</option>
-<option value="198">M Compl Sci Lang - Nego Multil - Pr -
-ISL</option>
-<option value="192">M Compl Sci Lang - Sci Parole - Sc -
-ISL</option>
-<option value="197">M Compl Sci Lang - Trad Aud-Vi - Pr -
-ISL</option>
-<option value="201">M Compl Sci Lang - Traduction - Pr -
-ISL</option>
-<option value="199">M Compl Sci Lang - Traductolog - Sc -
-ISL</option>
+<option value="194">M Compl Sci Lang - Didac Lang - Pr - ISL</option>
+<option value="193">M Compl Sci Lang - Didac Lang - Sc - ISL</option>
+<option value="200">M Compl Sci Lang - Interp Conf - Pr - ISL</option>
+<option value="196">M Compl Sci Lang - Lang Civ Sc - Pr - ISL</option>
+<option value="195">M Compl Sci Lang - Lang Cogn - Sc - ISL</option>
+<option value="198">M Compl Sci Lang - Nego Multil - Pr - ISL</option>
+<option value="192">M Compl Sci Lang - Sci Parole - Sc - ISL</option>
+<option value="197">M Compl Sci Lang - Trad Aud-Vi - Pr - ISL</option>
+<option value="201">M Compl Sci Lang - Traduction - Pr - ISL</option>
+<option value="199">M Compl Sci Lang - Traductolog - Sc - ISL</option>
 <option value="135">M info 1 an - FS</option>
 <option value="136">M info CLR soir - FS</option>
 <option value="137">M phys 1 an - FS</option>
@@ -256,9 +208,8 @@ ISL</option>
 <option value="154">M1 Physique FA Sc mat - FS</option>
 <option value="155">M1 Physique FD - FS</option>
 <option value="156">M1 Physique FS - FS</option>
-<option value="157">M1 Pol eco &amp; soc-FSGestion - FWEG</option>
-<option value="158">M1 Pol eco &amp; soc-FSManagement -
-FWEG</option>
+<option value="157">M1 Pol eco & soc-FSGestion - FWEG</option>
+<option value="158">M1 Pol eco & soc-FSManagement - FWEG</option>
 <option value="159">M1 Psycho FA - FPSE</option>
 <option value="160">M1 Psycho FS - FPSE</option>
 <option value="161">M1 Sc biomed - FMP</option>
@@ -285,1646 +236,1746 @@ FWEG</option>
 <option value="292">M2 Physique FA Int Fond - FS</option>
 <option value="293">M2 Physique FA Sc Mat - FS</option>
 <option value="183">M2 Physique FD - FS</option>
-<option value="290">M2 Pol eco &amp; soc - FSManagement -
-FWEG</option>
-<option value="185">M2 Pol eco &amp; soc -FSGestion - FWEG</option>
+<option value="290">M2 Pol eco & soc - FSManagement - FWEG</option>
+<option value="185">M2 Pol eco & soc -FSGestion - FWEG</option>
 <option value="186">M2 Psycho FA - FPSE</option>
 <option value="187">M2 Psycho FS - FPSE</option>
 <option value="188">M2 Sc biomed - FMP</option>
 <option value="189">M2 SG 120-FD - FWEG</option>
 <option value="190">M2 SG 120-FS - FWEG</option>
 <option value="191">M2 Traduction - FTI-EII</option>
-<option value="228">MA1 Ing&#233;nieur Civil Architecte FIN -
-FPMS</option>
-<option value="230">MA1 Ing&#233;nieur Civil Chimie/SDM MAT -
-FPMS</option>
-<option value="231">MA1 Ing&#233;nieur Civil Chimie/SDM MS -
-FPMS</option>
-<option value="232">MA1 Ing&#233;nieur Civil Chimie/SDM PIC -
-FPMS</option>
-<option value="233">MA1 Ing&#233;nieur Civil Elec BIOSYS -
-FPMS</option>
-<option value="234">MA1 Ing&#233;nieur Civil Elec ENERGIE -
-FPMS</option>
-<option value="235">MA1 Ing&#233;nieur Civil Elec TELEMEDIA -
-FPMS</option>
-<option value="238">MA1 Ing&#233;nieur Civil IG - Charleroi -
-FPMS</option>
-<option value="239">MA1 Ing&#233;nieur Civil IG SYS INFO -
-FPMS</option>
-<option value="241">MA1 Ing&#233;nieur Civil M&#233;canicien AUTO -
-FPMS</option>
-<option value="242">MA1 Ing&#233;nieur Civil M&#233;canicien GENE -
-FPMS</option>
-<option value="243">MA1 Ing&#233;nieur Civil M&#233;canicien GMEC -
-FPMS</option>
-<option value="245">MA1 Ing&#233;nieur Civil Mines Fin. Sp&#233;. -
-FPMS</option>
-<option value="247">MA2 Ing&#233;nieur Civil Architecte FIN -
-FPMS</option>
-<option value="249">MA2 Ing&#233;nieur Civil Chimie/SDM MAT -
-FPMS</option>
-<option value="250">MA2 Ing&#233;nieur Civil Chimie/SDM MS -
-FPMS</option>
-<option value="251">MA2 Ing&#233;nieur Civil Chimie/SDM PIC -
-FPMS</option>
-<option value="252">MA2 Ing&#233;nieur Civil Elec BIOSYS -
-FPMS</option>
-<option value="253">MA2 Ing&#233;nieur Civil Elec ENERGIE -
-FPMS</option>
-<option value="254">MA2 Ing&#233;nieur Civil Elec TELEMEDIA -
-FPMS</option>
-<option value="257">MA2 Ing&#233;nieur Civil IG - Charleroi -
-FPMS</option>
-<option value="258">MA2 Ing&#233;nieur Civil IG SYS INFO -
-FPMS</option>
-<option value="260">MA2 Ing&#233;nieur Civil M&#233;canicien AUTO -
-FPMS</option>
-<option value="261">MA2 Ing&#233;nieur Civil M&#233;canicien GENE -
-FPMS</option>
-<option value="262">MA2 Ing&#233;nieur Civil M&#233;canicien GMEC -
-FPMS</option>
-<option value="264">MA2 Ing&#233;nieur Civil Mines FINSPE -
-FPMS</option>
+<option value="228">MA1 Ingénieur Civil Architecte FIN - FPMS</option>
+<option value="230">MA1 Ingénieur Civil Chimie/SDM MAT - FPMS</option>
+<option value="231">MA1 Ingénieur Civil Chimie/SDM MS - FPMS</option>
+<option value="232">MA1 Ingénieur Civil Chimie/SDM PIC - FPMS</option>
+<option value="233">MA1 Ingénieur Civil Elec BIOSYS - FPMS</option>
+<option value="234">MA1 Ingénieur Civil Elec ENERGIE - FPMS</option>
+<option value="235">MA1 Ingénieur Civil Elec TELEMEDIA - FPMS</option>
+<option value="238">MA1 Ingénieur Civil IG - Charleroi - FPMS</option>
+<option value="239">MA1 Ingénieur Civil IG SYS INFO - FPMS</option>
+<option value="241">MA1 Ingénieur Civil Mécanicien AUTO - FPMS</option>
+<option value="242">MA1 Ingénieur Civil Mécanicien GENE - FPMS</option>
+<option value="243">MA1 Ingénieur Civil Mécanicien GMEC - FPMS</option>
+<option value="245">MA1 Ingénieur Civil Mines Fin. Spé. - FPMS</option>
+<option value="247">MA2 Ingénieur Civil Architecte FIN - FPMS</option>
+<option value="249">MA2 Ingénieur Civil Chimie/SDM MAT - FPMS</option>
+<option value="250">MA2 Ingénieur Civil Chimie/SDM MS - FPMS</option>
+<option value="251">MA2 Ingénieur Civil Chimie/SDM PIC - FPMS</option>
+<option value="252">MA2 Ingénieur Civil Elec BIOSYS - FPMS</option>
+<option value="253">MA2 Ingénieur Civil Elec ENERGIE - FPMS</option>
+<option value="254">MA2 Ingénieur Civil Elec TELEMEDIA - FPMS</option>
+<option value="257">MA2 Ingénieur Civil IG - Charleroi - FPMS</option>
+<option value="258">MA2 Ingénieur Civil IG SYS INFO - FPMS</option>
+<option value="260">MA2 Ingénieur Civil Mécanicien AUTO - FPMS</option>
+<option value="261">MA2 Ingénieur Civil Mécanicien GENE - FPMS</option>
+<option value="262">MA2 Ingénieur Civil Mécanicien GMEC - FPMS</option>
+<option value="264">MA2 Ingénieur Civil Mines FINSPE - FPMS</option>
 </select></td>
 </tr>
 <tr>
 <td height="30" width="120" align="right">Groupe :</td>
 <td height="30">
-<div id="divgroupe">&nbsp;<select name="groupe" class="edit">
+<div id="divgroupe"> 
+<select name="groupe" class="edit">
 <option value="168">A</option>
 <option value="145">B</option>
 </select></div>
 </td>
 </tr>
-</tbody>
 </table>
 </div>
 </div>
 </td>
-<td height="60" valign="top" width="35%">
-<table summary="" cellpadding="0" cellspacing="0" border="0">
-<tbody>
+<td height="60" width="35%" valign="top">
+<table border="0" cellspacing="0" cellpadding="0" summary="">
 <tr>
-<td height="30" align="right">D&#233;but :</td>
-<td>&nbsp;<input name="datedeb" id="datedeb" value="15/09/2011"
-size="9" maxlength="10" type="text" /><img src=
-"index.php_files/s_really.gif" id="dated" alt="" onclick=
-"return showCalendar('datedeb', '%d/%m/%Y');" /></td>
+<td align="right" height="30">Début :</td>
+<td> 
+<input name="datedeb" id="datedeb" value="15/09/2011" size="9" maxlength="10" type="text" />
+<img src="images/s_really.gif" id="dated" alt="" onclick="return showCalendar('datedeb', '%d/%m/%Y');" /></td>
 </tr>
 <tr>
-<td height="30" align="right">Fin :</td>
-<td>&nbsp;<input name="datefin" id="datefin" value="23/12/2011"
-size="9" maxlength="10" type="text" /><img src=
-"index.php_files/s_really.gif" id="datef" alt="" onclick=
-"return showCalendar('datefin', '%d/%m/%Y');" /></td>
+<td align="right" height="30">Fin :</td>
+<td> 
+<input name="datefin" id="datefin" value="23/12/2011" size="9" maxlength="10" type="text" />
+<img src="images/s_really.gif" id="datef" alt="" onclick="return showCalendar('datefin', '%d/%m/%Y');" /></td>
 </tr>
 <tr>
-<td height="30" align="right">P&#233;riode :</td>
-<td>&nbsp;<select name="periode">
-<option value="1" selected="selected">1er quadrimestre -
-2011-2012</option>
-<option value="2">2&#232;me quadrimestre - 2011-2012</option>
+<td align="right" height="30">Période :</td>
+<td> 
+<select name="periode">
+<option value="1" selected="selected">1er quadrimestre - 2011-2012</option>
+<option value="2">2ème quadrimestre - 2011-2012</option>
 </select></td>
 </tr>
-</tbody>
 </table>
 </td>
 </tr>
 <tr>
-<td colspan="2" align="center"><input value="Rechercher" type=
-"submit" /><input name="choixrech" value="1" type=
-"hidden" /><input name="hash" value=
-"acbebf9cd3cce27ad749e94a8f9cba03" type="hidden" /></td>
+<td colspan="2" align="center">
+<input value="Rechercher" type="submit" /> 
+<input type="hidden" name="choixrech" value="1" />
+<input type="hidden" name="hash" value="05b1e9dc3deb9a2f2517646ee348ce62" /></td>
 </tr>
-</tbody>
 </table>
 </form>
 </td>
 </tr>
 <tr>
-<td><font size="1" color="#505050" face="verdana"><font color=
-"#A80039">Les horaires des cours des facult&#233;s FA+U, FTI-EII et
-FPMs ne seront disponibles sur ce portail qu&#8217;&#224; partir de
-la rentr&#233;e 2011-2012.<br />
-Attention, tous les horaires sont susceptibles d'&#234;tre
-modifi&#233;s sans pr&#233;avis en fonction des contraintes
-d'organisation !</font><br />
+<td>
+<font face="verdana" size="1" color="#505050">
+<font color="#A80039">Les horaires des cours des facultés FA+U, FTI-EII et FPMs ne seront disponibles sur ce portail qu’à partir de la rentrée 2011-2012.
+<br />Attention, tous les horaires sont susceptibles d'être modifiés sans préavis en fonction des contraintes d'organisation !</font>
 <br />
-<b><u>Aide</u> :</b><br />
-1. Choisir le nom de la Formation dans la liste
-d&#233;roulante.<br />
-2. Si n&#233;cessaire, s&#233;lectionner un des groupes de la
-formation.<br />
-3. S&#233;lectionner une p&#233;riode :<br />
-- soit en choisissant une date de <b>d&#233;but</b> et une date de
-<b>fin</b>.<br />
-- soit en s&#233;lectionnant une <b>P&#233;riode</b> dans le menu
-d&#233;roulant (1er quadrimestre, 2&#232;me quadrimestre,
-...)<br />
-Les p&#233;riodes valides s'&#233;tendent du 15/09/2011 au
-23/12/2011 (1er quadrimestre - 2011-2012); du 6/02/2012 au
-19/05/2012 (2&#232;me quadrimestre - 2011-2012);<br />
-4. Cliquer sur le bouton &#171; <b>Rechercher</b> &#187;<br />
-5. Le r&#233;sultat de la recherche s&#8217;affiche de mani&#232;re
-d&#233;taill&#233;e. Pour obtenir les informations sous forme
-compacte (semainier ou quadrimestre), cliquer sur <b>Semaine</b> ou
-<b>P&#233;riode</b><br /></font></td>
+<br />
+<b>
+<u>Aide</u> :</b>
+<br />1. Choisir le nom de la Formation dans la liste déroulante.
+<br />2. Si nécessaire, sélectionner un des groupes de la formation.
+<br />3. Sélectionner une période :
+<br />- soit en choisissant une date de 
+<b>début</b> et une date de 
+<b>fin</b>.
+<br />- soit en sélectionnant une 
+<b>Période</b> dans le menu déroulant (1er quadrimestre, 2ème quadrimestre, ...)
+<br />Les périodes valides s'étendent du 15/09/2011 au 23/12/2011 (1er quadrimestre - 2011-2012); du 6/02/2012 au 19/05/2012 (2ème quadrimestre - 2011-2012);
+<br />4. Cliquer sur le bouton « 
+<b>Rechercher</b> »
+<br />5. Le résultat de la recherche s’affiche de manière détaillée. Pour obtenir les informations sous forme compacte (semainier ou quadrimestre), cliquer sur 
+<b>Semaine</b> ou 
+<b>Période</b>
+<br /></font>
+</td>
 </tr>
 <tr>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
-<center><font size="1" color="#505050" face="verdana"><b>Ces
-informations sont susceptibles d'&#234;tre modifi&#233;es sans
-pr&#233;avis en fonction des contraintes d'organisation de
-l'&#233;tablissement.</b></font></center>
-<table class="tabonglet" width="100%" align="center">
-<tbody>
+<center>
+<font face="verdana" size="1" color="#505050">
+<b>Ces informations sont susceptibles d'être modifiées sans préavis en fonction des contraintes d'organisation de l'établissement.</b>
+</font>
+</center>
+<table class="tabonglet" align="center" width="100%">
 <tr>
 <td class="titre2" colspan="4" height="30" align="center">
-<b>R&#233;sultat de la recherche</b>&nbsp;<img src=
-"index.php_files/pdf.png" alt="Version PDF de la recherche" border=
-"0" />&nbsp;<a class="pdf" href=
-"https://applications.umons.ac.be/horaires/horairepdf.php?datedebut=1316037600&amp;datefin=1324594800&amp;formation=59"
-target="_blank">Semaine</a>&nbsp;<a class="pdf" href=
-"https://applications.umons.ac.be/horaires/horairepdf.php?quadrimestre=1&amp;formation=59"
-target="_blank">P&#233;riode</a></td>
+<b>Résultat de la recherche</b> 
+<img src="images/pdf.png" border="0" alt="Version PDF de la recherche" /> 
+<a class="pdf" href="horairepdf.php?datedebut=1316037600&datefin=1324594800&formation=59" target="_blank">Semaine</a> 
+<a class="pdf" href="horairepdf.php?quadrimestre=1&formation=59" target="_blank">Période</a></td>
 </tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>lundi
-19/09/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">15:15-17:10<br />
-(TP)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MENS T</td>
-<td valign="top" width="20%" align="center">0A07 P</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>mardi
-20/09/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:15-12:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Calcul des proba et th
-erreurs</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. DE CONINCK J</td>
-<td valign="top" width="20%" align="center">0A07 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">13:15-15:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MENS T</td>
-<td valign="top" width="20%" align="center">3E10 P</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>mercredi
-21/09/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Intelligence artificielle</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MELOT H</td>
-<td valign="top" width="20%" align="center">0A07 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:15-12:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Struct de donn&#233;es II</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">Mme BRUYERE V</td>
-<td valign="top" width="20%" align="center">0A11 P</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>jeudi
-22/09/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Struct de donn&#233;es II</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">Mme BRUYERE V</td>
-<td valign="top" width="20%" align="center">0A07 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:30-12:30<br />
-(CM)</td>
-<td valign="top" width="35%"><u>7868 - Informatique temps
-r&#233;el</u><br />
-Bac 3 Info (FS) gr. A,B<br /></td>
-<td valign="top" width="30%" align="center">M. MANNEBACK P</td>
-<td valign="top" width="20%" align="center">Auditoire 26</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>vendredi
-23/09/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:05<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Economie politique</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MAHY B</td>
-<td valign="top" width="20%" align="center">Drechsel</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>lundi
-26/09/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Calcul des proba et th erreurs</u>
-anne prparatoire au master en info mons3 bac physique
-(probabilits)3 bac info<br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. DE CONINCK J</td>
-<td valign="top" width="20%" align="center">233 B4</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">15:15-17:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MENS T</td>
-<td valign="top" width="20%" align="center">Plisnier</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>mercredi
-28/09/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Intelligence artificielle</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MELOT H</td>
-<td valign="top" width="20%" align="center">0A07 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:15-12:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Struct de donn&#233;es II</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">Mme BRUYERE V</td>
-<td valign="top" width="20%" align="center">0A11 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">13:15-15:05<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Economie politique</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MAHY B</td>
-<td valign="top" width="20%" align="center">Drechsel</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">15:15-17:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MENS T</td>
-<td valign="top" width="20%" align="center">0A11 P</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>jeudi
-29/09/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Struct de donn&#233;es II</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">Mme BRUYERE V</td>
-<td valign="top" width="20%" align="center">0A07 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:30-12:30<br />
-(CM)</td>
-<td valign="top" width="35%"><u>7868 - Informatique temps
-r&#233;el</u><br />
-Bac 3 Info (FS) gr. A,B<br /></td>
-<td valign="top" width="30%" align="center">M. MANNEBACK P</td>
-<td valign="top" width="20%" align="center">Auditoire 26</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>vendredi
-30/09/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:05<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Economie politique</u> Bac 3 Info
-&#224; partir du vendredi 30 sept.8-10h<br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MAHY B</td>
-<td valign="top" width="20%" align="center">Drechsel</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>lundi
-03/10/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Calcul des proba et th erreurs</u>
-anne prparatoire au master en info mons3 bac physique
-(probabilits)3 bac info<br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. DE CONINCK J</td>
-<td valign="top" width="20%" align="center">233 B4</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">15:15-17:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MENS T</td>
-<td valign="top" width="20%" align="center">Plisnier</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>mardi
-04/10/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:15-12:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Calcul des proba et th
-erreurs</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. DE CONINCK J</td>
-<td valign="top" width="20%" align="center">0A07 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">13:15-15:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MENS T</td>
-<td valign="top" width="20%" align="center">3E10 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">15:15-17:10<br />
-(TP)</td>
-<td valign="top" width="35%"><u>Intelligence artificielle</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. PUISSANT J-P</td>
-<td valign="top" width="20%" align="center">Escher</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>mercredi
-05/10/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Intelligence artificielle</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MELOT H</td>
-<td valign="top" width="20%" align="center">0A07 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:15-12:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Struct de donn&#233;es II</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">Mme BRUYERE V</td>
-<td valign="top" width="20%" align="center">0A11 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">13:15-15:05<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Economie politique</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MAHY B</td>
-<td valign="top" width="20%" align="center">Drechsel</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>jeudi
-06/10/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Struct de donn&#233;es II</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">Mme BRUYERE V</td>
-<td valign="top" width="20%" align="center">0A07 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:30-12:30<br />
-(CM)</td>
-<td valign="top" width="35%"><u>7868 - Informatique temps
-r&#233;el</u><br />
-Bac 3 Info (FS) gr. A,B<br /></td>
-<td valign="top" width="30%" align="center">M. MANNEBACK P</td>
-<td valign="top" width="20%" align="center">Auditoire 26</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">13:15-15:10<br />
-(TP)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. BOHY A</td>
-<td valign="top" width="20%" align="center">Turing</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>vendredi
-07/10/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:05<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Economie politique</u> Bac 3 Info
-&#224; partir du vendredi 30 sept.8-10h<br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MAHY B</td>
-<td valign="top" width="20%" align="center">Drechsel</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>lundi
-10/10/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Calcul des proba et th erreurs</u>
-anne prparatoire au master en info mons3 bac physique
-(probabilits)3 bac info<br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. DE CONINCK J</td>
-<td valign="top" width="20%" align="center">233 B4</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">15:15-17:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MENS T</td>
-<td valign="top" width="20%" align="center">Plisnier</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>mardi
-11/10/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:15-12:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Calcul des proba et th
-erreurs</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. DE CONINCK J</td>
-<td valign="top" width="20%" align="center">0A07 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">13:15-15:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MENS T</td>
-<td valign="top" width="20%" align="center">3E20 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">15:15-17:10<br />
-(TP)</td>
-<td valign="top" width="35%"><u>Intelligence artificielle</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. PUISSANT J-P</td>
-<td valign="top" width="20%" align="center">Escher</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>mercredi
-12/10/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Intelligence artificielle</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MELOT H</td>
-<td valign="top" width="20%" align="center">0A07 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:15-12:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Struct de donn&#233;es II</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">Mme BRUYERE V</td>
-<td valign="top" width="20%" align="center">0A11 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">13:15-15:05<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Economie politique</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MAHY B</td>
-<td valign="top" width="20%" align="center">Drechsel</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>jeudi
-13/10/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Struct de donn&#233;es II</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">Mme BRUYERE V</td>
-<td valign="top" width="20%" align="center">3C09 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:30-12:30<br />
-(CM)</td>
-<td valign="top" width="35%"><u>7868 - Informatique temps
-r&#233;el</u><br />
-Bac 3 Info (FS) gr. A,B<br /></td>
-<td valign="top" width="30%" align="center">M. MANNEBACK P</td>
-<td valign="top" width="20%" align="center">Auditoire 26</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">13:15-15:10<br />
-(TP)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. BOHY A</td>
-<td valign="top" width="20%" align="center">211 B6</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>vendredi
-14/10/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:05<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Economie politique</u> Bac 3 Info
-&#224; partir du vendredi 30 sept.8-10h<br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MAHY B</td>
-<td valign="top" width="20%" align="center">Drechsel</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>lundi
-17/10/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Calcul des proba et th erreurs</u>
-anne prparatoire au master en info mons3 bac physique
-(probabilits)3 bac info<br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. DE CONINCK J</td>
-<td valign="top" width="20%" align="center">233 B4</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">15:15-17:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MENS T</td>
-<td valign="top" width="20%" align="center">124 B6</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>mardi
-18/10/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(TP)</td>
-<td valign="top" width="35%"><u>Intelligence artificielle</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. PUISSANT J-P</td>
-<td valign="top" width="20%" align="center">Escher</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:15-12:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Calcul des proba et th
-erreurs</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. DE CONINCK J</td>
-<td valign="top" width="20%" align="center">0A07 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">13:30-17:00<br />
-(TP)</td>
-<td valign="top" width="35%"><u>7868 - Informatique temps
-r&#233;el</u><br />
-Bac 3 Info (FS) gr. A,B<br /></td>
-<td valign="top" width="30%" align="center">M. MAHMOUDI S<br />
-M. NOEL S</td>
-<td valign="top" width="20%" align="center">Salle PC IGLab</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>mercredi
-19/10/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Intelligence artificielle</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MELOT H</td>
-<td valign="top" width="20%" align="center">0A07 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:15-12:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Struct de donn&#233;es II</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">Mme BRUYERE V</td>
-<td valign="top" width="20%" align="center">0A07 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">13:15-15:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Economie politique</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MAHY B</td>
-<td valign="top" width="20%" align="center">0A07 P</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>jeudi
-20/10/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Struct de donn&#233;es II</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">Mme BRUYERE V</td>
-<td valign="top" width="20%" align="center">3C09 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:30-12:30<br />
-(CM)</td>
-<td valign="top" width="35%"><u>7868 - Informatique temps
-r&#233;el</u><br />
-Bac 3 Info (FS) gr. A,B<br /></td>
-<td valign="top" width="30%" align="center">M. MANNEBACK P</td>
-<td valign="top" width="20%" align="center">Auditoire 26</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">13:15-15:10<br />
-(TP)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. BOHY A</td>
-<td valign="top" width="20%" align="center">Plisnier</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>vendredi
-21/10/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:05<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Economie politique</u> Bac 3 Info
-&#224; partir du vendredi 30 sept.8-10h<br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MAHY B</td>
-<td valign="top" width="20%" align="center">Drechsel</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>lundi
-24/10/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Calcul des proba et th erreurs</u>
-anne prparatoire au master en info mons3 bac physique
-(probabilits)3 bac info<br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. DE CONINCK J</td>
-<td valign="top" width="20%" align="center">233 B4</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">15:15-17:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MENS T</td>
-<td valign="top" width="20%" align="center">0A07 P</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>mardi
-25/10/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(TP)</td>
-<td valign="top" width="35%"><u>Intelligence artificielle</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. PUISSANT J-P</td>
-<td valign="top" width="20%" align="center">Escher</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">13:30-17:00<br />
-(TP)</td>
-<td valign="top" width="35%"><u>7868 - Informatique temps
-r&#233;el</u><br />
-Bac 3 Info (FS) gr. A,B<br /></td>
-<td valign="top" width="30%" align="center">M. MAHMOUDI S<br />
-M. NOEL S</td>
-<td valign="top" width="20%" align="center">Salle PC IGLab</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>mercredi
-26/10/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Intelligence artificielle</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MELOT H</td>
-<td valign="top" width="20%" align="center">3E20 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:15-12:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Struct de donn&#233;es II</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">Mme BRUYERE V</td>
-<td valign="top" width="20%" align="center">0A07 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">13:15-15:05<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Economie politique</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MAHY B</td>
-<td valign="top" width="20%" align="center">Drechsel</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>jeudi
-27/10/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Struct de donn&#233;es II</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">Mme BRUYERE V</td>
-<td valign="top" width="20%" align="center">3C09 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:30-12:30<br />
-(CM)</td>
-<td valign="top" width="35%"><u>7868 - Informatique temps
-r&#233;el</u><br />
-Bac 3 Info (FS) gr. A,B<br /></td>
-<td valign="top" width="30%" align="center">M. MANNEBACK P</td>
-<td valign="top" width="20%" align="center">Auditoire 26</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">13:15-15:10<br />
-(TP)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. BOHY A</td>
-<td valign="top" width="20%" align="center">Pascal</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>vendredi
-28/10/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:05<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Economie politique</u> Bac 3 Info
-&#224; partir du vendredi 30 sept.8-10h<br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MAHY B</td>
-<td valign="top" width="20%" align="center">Drechsel</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>lundi
-31/10/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Calcul des proba et th erreurs</u>
-anne prparatoire au master en info mons3 bac physique
-(probabilits)3 bac info<br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. DE CONINCK J</td>
-<td valign="top" width="20%" align="center">233 B4</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:15-12:10<br />
-(TP)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. BOHY A</td>
-<td valign="top" width="20%" align="center">0A07 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">15:15-17:10<br />
-(SE)</td>
-<td valign="top" width="35%"><u>Calcul des proba et th erreurs</u>
-Exercices<br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. DE CONINCK J</td>
-<td valign="top" width="20%" align="center">233 B4</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>jeudi
-03/11/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Struct de donn&#233;es II</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">Mme BRUYERE V</td>
-<td valign="top" width="20%" align="center">3C09 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:30-12:30<br />
-(CM)</td>
-<td valign="top" width="35%"><u>7868 - Informatique temps
-r&#233;el</u><br />
-Bac 3 Info (FS) gr. A,B<br /></td>
-<td valign="top" width="30%" align="center">M. MANNEBACK P</td>
-<td valign="top" width="20%" align="center">Auditoire 26</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">15:15-17:10<br />
-(TP)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MENS T</td>
-<td valign="top" width="20%" align="center">0A07 P</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>vendredi
-04/11/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:05<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Economie politique</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MAHY B</td>
-<td valign="top" width="20%" align="center">Hotyat</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>lundi
-07/11/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Calcul des proba et th erreurs</u>
-anne prparatoire au master en info mons3 bac physique
-(probabilits)3 bac info<br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. DE CONINCK J</td>
-<td valign="top" width="20%" align="center">233 B4</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:15-12:10<br />
-(TP)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. BOHY A</td>
-<td valign="top" width="20%" align="center">0A07 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">15:15-17:10<br />
-(SE)</td>
-<td valign="top" width="35%"><u>Calcul des proba et th erreurs</u>
-Exercices<br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. DE CONINCK J</td>
-<td valign="top" width="20%" align="center">233 B4</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>mardi
-08/11/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:05<br />
-(TP)</td>
-<td valign="top" width="35%"><u>Economie politique</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MAHY B<br />
-Mme DUPONT C</td>
-<td valign="top" width="20%" align="center">218</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:15-12:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MENS T</td>
-<td valign="top" width="20%" align="center">18 B6</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">13:15-15:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MENS T</td>
-<td valign="top" width="20%" align="center">3C09 P</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>mercredi
-09/11/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Intelligence artificielle</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MELOT H</td>
-<td valign="top" width="20%" align="center">3E20 P</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>jeudi
-10/11/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Struct de donn&#233;es II</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">Mme BRUYERE V</td>
-<td valign="top" width="20%" align="center">211 B6</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:15-12:10<br />
-(TP)</td>
-<td valign="top" width="35%"><u>Intelligence artificielle</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. PUISSANT J-P</td>
-<td valign="top" width="20%" align="center">Escher</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>lundi
-14/11/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Calcul des proba et th erreurs</u>
-anne prparatoire au master en info mons3 bac physique
-(probabilits)3 bac info<br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. DE CONINCK J</td>
-<td valign="top" width="20%" align="center">233 B4</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:15-12:10<br />
-(TP)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. BOHY A</td>
-<td valign="top" width="20%" align="center">0A07 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">15:15-17:10<br />
-(SE)</td>
-<td valign="top" width="35%"><u>Calcul des proba et th erreurs</u>
-Exercices<br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. DE CONINCK J</td>
-<td valign="top" width="20%" align="center">233 B4</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>mardi
-15/11/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:05<br />
-(TP)</td>
-<td valign="top" width="35%"><u>Economie politique</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MAHY B<br />
-Mme DUPONT C</td>
-<td valign="top" width="20%" align="center">218</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:15-12:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MENS T</td>
-<td valign="top" width="20%" align="center">124 B6</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">13:15-15:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MENS T</td>
-<td valign="top" width="20%" align="center">3C09 P</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>mercredi
-16/11/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Intelligence artificielle</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MELOT H</td>
-<td valign="top" width="20%" align="center">3E20 P</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>jeudi
-17/11/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Struct de donn&#233;es II</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">Mme BRUYERE V</td>
-<td valign="top" width="20%" align="center">211 B6</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:15-12:10<br />
-(TP)</td>
-<td valign="top" width="35%"><u>Intelligence artificielle</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. PUISSANT J-P</td>
-<td valign="top" width="20%" align="center">Escher</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">13:15-15:10<br />
-(TP)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. BOHY A</td>
-<td valign="top" width="20%" align="center">3C09 P</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>lundi
-21/11/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Calcul des proba et th erreurs</u>
-anne prparatoire au master en info mons3 bac physique
-(probabilits)3 bac info<br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. DE CONINCK J</td>
-<td valign="top" width="20%" align="center">233 B4</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:15-12:10<br />
-(TP)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. BOHY A</td>
-<td valign="top" width="20%" align="center">Turing</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">15:15-17:10<br />
-(SE)</td>
-<td valign="top" width="35%"><u>Calcul des proba et th erreurs</u>
-Exercices<br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. DE CONINCK J</td>
-<td valign="top" width="20%" align="center">233 B4</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>mardi
-22/11/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:05<br />
-(TP)</td>
-<td valign="top" width="35%"><u>Economie politique</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MAHY B<br />
-Mme DUPONT C</td>
-<td valign="top" width="20%" align="center">218</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">13:15-15:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MENS T</td>
-<td valign="top" width="20%" align="center">124 B6</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>mercredi
-23/11/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Intelligence artificielle</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MELOT H</td>
-<td valign="top" width="20%" align="center">3E20 P</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>jeudi
-24/11/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Struct de donn&#233;es II</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">Mme BRUYERE V</td>
-<td valign="top" width="20%" align="center">211 B6</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">13:15-15:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. BOHY A</td>
-<td valign="top" width="20%" align="center">Salle Cons Amph</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>lundi
-28/11/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Calcul des proba et th erreurs</u>
-anne prparatoire au master en info mons3 bac physique
-(probabilits)3 bac info<br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. DE CONINCK J</td>
-<td valign="top" width="20%" align="center">233 B4</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:15-12:10<br />
-(TP)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. BOHY A</td>
-<td valign="top" width="20%" align="center">Turing</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">15:15-17:10<br />
-(SE)</td>
-<td valign="top" width="35%"><u>Calcul des proba et th erreurs</u>
-Exercices<br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. DE CONINCK J</td>
-<td valign="top" width="20%" align="center">233 B4</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>mardi
-29/11/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">13:15-17:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Projet de g&#233;nie
-logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MENS T</td>
-<td valign="top" width="20%" align="center">Escher</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>mercredi
-30/11/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Intelligence artificielle</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MELOT H</td>
-<td valign="top" width="20%" align="center">Salle Cons Amph</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>jeudi
-01/12/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Struct de donn&#233;es II</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">Mme BRUYERE V</td>
-<td valign="top" width="20%" align="center">211 B6</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">13:15-15:10<br />
-(TP)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. BOHY A</td>
-<td valign="top" width="20%" align="center">3C09 P</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>lundi
-05/12/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Calcul des proba et th erreurs</u>
-anne prparatoire au master en info mons3 bac physique
-(probabilits)3 bac info<br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. DE CONINCK J</td>
-<td valign="top" width="20%" align="center">233 B4</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:15-12:10<br />
-(TP)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. BOHY A</td>
-<td valign="top" width="20%" align="center">Turing</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">15:15-17:10<br />
-(SE)</td>
-<td valign="top" width="35%"><u>Calcul des proba et th erreurs</u>
-Exercices<br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. DE CONINCK J</td>
-<td valign="top" width="20%" align="center">233 B4</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>mardi
-06/12/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">13:15-17:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Projet de g&#233;nie
-logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MENS T</td>
-<td valign="top" width="20%" align="center">Escher</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>mercredi
-07/12/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Intelligence artificielle</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MELOT H</td>
-<td valign="top" width="20%" align="center">3C09 P</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>jeudi
-08/12/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Struct de donn&#233;es II</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">Mme BRUYERE V</td>
-<td valign="top" width="20%" align="center">211 B6</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:15-12:10<br />
-(TP)</td>
-<td valign="top" width="35%"><u>Intelligence artificielle</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. PUISSANT J-P</td>
-<td valign="top" width="20%" align="center">Escher</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">13:15-15:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u> Cours +
-TP<br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MENS T</td>
-<td valign="top" width="20%" align="center">124 B6</td>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>lundi 19/09/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">15:15-17:10
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MENS T</td>
+<td width="20%" valign="top" align="center">0A07 P</td>
 </tr>
 <tr>
-<td class="jour" colspan="4" height="25" align="left"><b>lundi
-12/12/2011</b></td>
+<td class="jour" align="left" colspan="4" height="25">
+<b>mardi 20/09/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:15-12:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Calcul des proba et th erreurs</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. DE CONINCK J</td>
+<td width="20%" valign="top" align="center">0A07 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">13:15-15:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MENS T</td>
+<td width="20%" valign="top" align="center">3E10 P</td>
 </tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Calcul des proba et th erreurs</u>
-anne prparatoire au master en info mons3 bac physique
-(probabilits)3 bac info<br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. DE CONINCK J</td>
-<td valign="top" width="20%" align="center">233 B4</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:15-12:10<br />
-(TP)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MENS T</td>
-<td valign="top" width="20%" align="center">0A07 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">15:15-17:10<br />
-(SE)</td>
-<td valign="top" width="35%"><u>Calcul des proba et th erreurs</u>
-Exercices<br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. DE CONINCK J</td>
-<td valign="top" width="20%" align="center">233 B4</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>mardi
-13/12/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">13:15-17:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Projet de g&#233;nie
-logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MENS T</td>
-<td valign="top" width="20%" align="center">Escher</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>mercredi
-14/12/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Intelligence artificielle</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MELOT H</td>
-<td valign="top" width="20%" align="center">3E20 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:15-12:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Struct de donn&#233;es II</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">Mme BRUYERE V</td>
-<td valign="top" width="20%" align="center">0A07 P</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>jeudi
-15/12/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Struct de donn&#233;es II</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">Mme BRUYERE V</td>
-<td valign="top" width="20%" align="center">0A11 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:15-12:10<br />
-(TP)</td>
-<td valign="top" width="35%"><u>Intelligence artificielle</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. PUISSANT J-P</td>
-<td valign="top" width="20%" align="center">Escher</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">13:15-15:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u> Cours +
-TP<br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MENS T</td>
-<td valign="top" width="20%" align="center">211 B6</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>lundi
-19/12/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Calcul des proba et th erreurs</u>
-anne prparatoire au master en info mons3 bac physique
-(probabilits)3 bac info<br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. DE CONINCK J</td>
-<td valign="top" width="20%" align="center">233 B4</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:15-12:10<br />
-(TP)</td>
-<td valign="top" width="35%"><u>G&#233;nie logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. BOHY A</td>
-<td valign="top" width="20%" align="center">Turing</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">15:15-17:10<br />
-(SE)</td>
-<td valign="top" width="35%"><u>Calcul des proba et th erreurs</u>
-Exercices<br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. DE CONINCK J</td>
-<td valign="top" width="20%" align="center">233 B4</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>mardi
-20/12/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">13:15-17:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Projet de g&#233;nie
-logiciel</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MENS T</td>
-<td valign="top" width="20%" align="center">Escher</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>mercredi
-21/12/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Intelligence artificielle</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">M. MELOT H</td>
-<td valign="top" width="20%" align="center">3E20 P</td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">10:15-12:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Struct de donn&#233;es II</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">Mme BRUYERE V</td>
-<td valign="top" width="20%" align="center">0A07 P</td>
-</tr>
-<tr>
-<td class="jour" colspan="4" height="25" align="left"><b>jeudi
-22/12/2011</b></td>
-</tr>
-<tr>
-<td class="jour" height="40" valign="top" width="15%" align=
-"center">08:15-10:10<br />
-(CM)</td>
-<td valign="top" width="35%"><u>Struct de donn&#233;es II</u><br />
-Bac 3 Info (FS)<br /></td>
-<td valign="top" width="30%" align="center">Mme BRUYERE V</td>
-<td valign="top" width="20%" align="center">211 B6</td>
-</tr>
-<tr>
-<td class="baspage" colspan="4" height="25" align="right">Doc. 031
-(cours) - Doc. 039 (examens)</td>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>mercredi 21/09/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Intelligence artificielle</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MELOT H</td>
+<td width="20%" valign="top" align="center">0A07 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:15-12:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Struct de données II</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">Mme BRUYERE V</td>
+<td width="20%" valign="top" align="center">0A11 P</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>jeudi 22/09/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Struct de données II</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">Mme BRUYERE V</td>
+<td width="20%" valign="top" align="center">0A07 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:30-12:30
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>7868 - Informatique temps réel</u>
+<br />Bac 3 Info (FS) gr. A,B
+<br /></td>
+<td width="30%" valign="top" align="center">M. MANNEBACK P</td>
+<td width="20%" valign="top" align="center">Auditoire 26</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>vendredi 23/09/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:05
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Economie politique</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MAHY B</td>
+<td width="20%" valign="top" align="center">Drechsel</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>lundi 26/09/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Calcul des proba et th erreurs</u> anne prparatoire au master en info mons3 bac physique (probabilits)3 bac info
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. DE CONINCK J</td>
+<td width="20%" valign="top" align="center">233 B4</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">15:15-17:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MENS T</td>
+<td width="20%" valign="top" align="center">Plisnier</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>mercredi 28/09/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Intelligence artificielle</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MELOT H</td>
+<td width="20%" valign="top" align="center">0A07 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:15-12:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Struct de données II</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">Mme BRUYERE V</td>
+<td width="20%" valign="top" align="center">0A11 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">13:15-15:05
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Economie politique</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MAHY B</td>
+<td width="20%" valign="top" align="center">Drechsel</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">15:15-17:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MENS T</td>
+<td width="20%" valign="top" align="center">0A11 P</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>jeudi 29/09/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Struct de données II</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">Mme BRUYERE V</td>
+<td width="20%" valign="top" align="center">0A07 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:30-12:30
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>7868 - Informatique temps réel</u>
+<br />Bac 3 Info (FS) gr. A,B
+<br /></td>
+<td width="30%" valign="top" align="center">M. MANNEBACK P</td>
+<td width="20%" valign="top" align="center">Auditoire 26</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>vendredi 30/09/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:05
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Economie politique</u> Bac 3 Info à partir du vendredi 30 sept.8-10h
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MAHY B</td>
+<td width="20%" valign="top" align="center">Drechsel</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>lundi 03/10/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Calcul des proba et th erreurs</u> anne prparatoire au master en info mons3 bac physique (probabilits)3 bac info
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. DE CONINCK J</td>
+<td width="20%" valign="top" align="center">233 B4</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">15:15-17:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MENS T</td>
+<td width="20%" valign="top" align="center">Plisnier</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>mardi 04/10/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:15-12:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Calcul des proba et th erreurs</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. DE CONINCK J</td>
+<td width="20%" valign="top" align="center">0A07 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">13:15-15:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MENS T</td>
+<td width="20%" valign="top" align="center">3E10 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">15:15-17:10
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>Intelligence artificielle</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. PUISSANT J-P</td>
+<td width="20%" valign="top" align="center">Escher</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>mercredi 05/10/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Intelligence artificielle</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MELOT H</td>
+<td width="20%" valign="top" align="center">0A07 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:15-12:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Struct de données II</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">Mme BRUYERE V</td>
+<td width="20%" valign="top" align="center">0A11 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">13:15-15:05
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Economie politique</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MAHY B</td>
+<td width="20%" valign="top" align="center">Drechsel</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>jeudi 06/10/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Struct de données II</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">Mme BRUYERE V</td>
+<td width="20%" valign="top" align="center">0A07 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:30-12:30
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>7868 - Informatique temps réel</u>
+<br />Bac 3 Info (FS) gr. A,B
+<br /></td>
+<td width="30%" valign="top" align="center">M. MANNEBACK P</td>
+<td width="20%" valign="top" align="center">Auditoire 26</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">13:15-15:10
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. BOHY A</td>
+<td width="20%" valign="top" align="center">Turing</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>vendredi 07/10/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:05
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Economie politique</u> Bac 3 Info à partir du vendredi 30 sept.8-10h
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MAHY B</td>
+<td width="20%" valign="top" align="center">Drechsel</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>lundi 10/10/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Calcul des proba et th erreurs</u> anne prparatoire au master en info mons3 bac physique (probabilits)3 bac info
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. DE CONINCK J</td>
+<td width="20%" valign="top" align="center">233 B4</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">15:15-17:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MENS T</td>
+<td width="20%" valign="top" align="center">Plisnier</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>mardi 11/10/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:15-12:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Calcul des proba et th erreurs</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. DE CONINCK J</td>
+<td width="20%" valign="top" align="center">0A07 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">13:15-15:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MENS T</td>
+<td width="20%" valign="top" align="center">3E20 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">15:15-17:10
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>Intelligence artificielle</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. PUISSANT J-P</td>
+<td width="20%" valign="top" align="center">Escher</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>mercredi 12/10/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Intelligence artificielle</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MELOT H</td>
+<td width="20%" valign="top" align="center">0A07 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:15-12:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Struct de données II</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">Mme BRUYERE V</td>
+<td width="20%" valign="top" align="center">0A11 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">13:15-15:05
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Economie politique</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MAHY B</td>
+<td width="20%" valign="top" align="center">Drechsel</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>jeudi 13/10/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Struct de données II</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">Mme BRUYERE V</td>
+<td width="20%" valign="top" align="center">3C09 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:30-12:30
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>7868 - Informatique temps réel</u>
+<br />Bac 3 Info (FS) gr. A,B
+<br /></td>
+<td width="30%" valign="top" align="center">M. MANNEBACK P</td>
+<td width="20%" valign="top" align="center">Auditoire 26</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">13:15-15:10
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. BOHY A</td>
+<td width="20%" valign="top" align="center">211 B6</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>vendredi 14/10/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:05
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Economie politique</u> Bac 3 Info à partir du vendredi 30 sept.8-10h
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MAHY B</td>
+<td width="20%" valign="top" align="center">Drechsel</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>lundi 17/10/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Calcul des proba et th erreurs</u> anne prparatoire au master en info mons3 bac physique (probabilits)3 bac info
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. DE CONINCK J</td>
+<td width="20%" valign="top" align="center">233 B4</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:15-12:05
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>Economie politique</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">Mme DUPONT C</td>
+<td width="20%" valign="top" align="center">216</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">15:15-17:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MENS T</td>
+<td width="20%" valign="top" align="center">124 B6</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>mardi 18/10/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>Intelligence artificielle</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. PUISSANT J-P</td>
+<td width="20%" valign="top" align="center">Escher</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:15-12:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Calcul des proba et th erreurs</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. DE CONINCK J</td>
+<td width="20%" valign="top" align="center">0A07 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">13:30-17:00
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>7868 - Informatique temps réel</u>
+<br />Bac 3 Info (FS) gr. A,B
+<br /></td>
+<td width="30%" valign="top" align="center">M. MAHMOUDI S
+<br />M. NOEL S</td>
+<td width="20%" valign="top" align="center">Salle PC IGLab</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>mercredi 19/10/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Intelligence artificielle</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MELOT H</td>
+<td width="20%" valign="top" align="center">0A07 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:15-12:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Struct de données II</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">Mme BRUYERE V</td>
+<td width="20%" valign="top" align="center">0A07 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">13:15-15:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Economie politique</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MAHY B</td>
+<td width="20%" valign="top" align="center">0A07 P</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>jeudi 20/10/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Struct de données II</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">Mme BRUYERE V</td>
+<td width="20%" valign="top" align="center">3C09 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:30-12:30
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>7868 - Informatique temps réel</u>
+<br />Bac 3 Info (FS) gr. A,B
+<br /></td>
+<td width="30%" valign="top" align="center">M. MANNEBACK P</td>
+<td width="20%" valign="top" align="center">Auditoire 26</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">13:15-15:10
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. BOHY A</td>
+<td width="20%" valign="top" align="center">Plisnier</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>vendredi 21/10/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:05
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Economie politique</u> Bac 3 Info à partir du vendredi 30 sept.8-10h
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MAHY B</td>
+<td width="20%" valign="top" align="center">Drechsel</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>lundi 24/10/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Calcul des proba et th erreurs</u> anne prparatoire au master en info mons3 bac physique (probabilits)3 bac info
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. DE CONINCK J</td>
+<td width="20%" valign="top" align="center">233 B4</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">15:15-17:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MENS T</td>
+<td width="20%" valign="top" align="center">0A07 P</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>mardi 25/10/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>Intelligence artificielle</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. PUISSANT J-P</td>
+<td width="20%" valign="top" align="center">Escher</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">13:30-17:00
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>7868 - Informatique temps réel</u>
+<br />Bac 3 Info (FS) gr. A,B
+<br /></td>
+<td width="30%" valign="top" align="center">M. MAHMOUDI S
+<br />M. NOEL S</td>
+<td width="20%" valign="top" align="center">Salle PC IGLab</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>mercredi 26/10/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Intelligence artificielle</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MELOT H</td>
+<td width="20%" valign="top" align="center">3E20 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:15-12:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Struct de données II</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">Mme BRUYERE V</td>
+<td width="20%" valign="top" align="center">0A07 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">13:15-15:05
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Economie politique</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MAHY B</td>
+<td width="20%" valign="top" align="center">Drechsel</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>jeudi 27/10/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Struct de données II</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">Mme BRUYERE V</td>
+<td width="20%" valign="top" align="center">3C09 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:30-12:30
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>7868 - Informatique temps réel</u>
+<br />Bac 3 Info (FS) gr. A,B
+<br /></td>
+<td width="30%" valign="top" align="center">M. MANNEBACK P</td>
+<td width="20%" valign="top" align="center">Auditoire 26</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">13:15-15:10
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. BOHY A</td>
+<td width="20%" valign="top" align="center">Pascal</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>vendredi 28/10/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:05
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Economie politique</u> Bac 3 Info à partir du vendredi 30 sept.8-10h
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MAHY B</td>
+<td width="20%" valign="top" align="center">Drechsel</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>lundi 31/10/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Calcul des proba et th erreurs</u> anne prparatoire au master en info mons3 bac physique (probabilits)3 bac info
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. DE CONINCK J</td>
+<td width="20%" valign="top" align="center">233 B4</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:15-12:10
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. BOHY A</td>
+<td width="20%" valign="top" align="center">0A07 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">15:15-17:10
+<br />(SE)</td>
+<td width="35%" valign="top">
+<u>Calcul des proba et th erreurs</u> Exercices
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. DE CONINCK J</td>
+<td width="20%" valign="top" align="center">233 B4</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>jeudi 03/11/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Struct de données II</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">Mme BRUYERE V</td>
+<td width="20%" valign="top" align="center">3C09 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:30-12:30
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>7868 - Informatique temps réel</u>
+<br />Bac 3 Info (FS) gr. A,B
+<br /></td>
+<td width="30%" valign="top" align="center">M. MANNEBACK P</td>
+<td width="20%" valign="top" align="center">Auditoire 26</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">15:15-17:10
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MENS T</td>
+<td width="20%" valign="top" align="center">0A07 P</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>vendredi 04/11/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:05
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Economie politique</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MAHY B</td>
+<td width="20%" valign="top" align="center">Hotyat</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>lundi 07/11/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Calcul des proba et th erreurs</u> anne prparatoire au master en info mons3 bac physique (probabilits)3 bac info
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. DE CONINCK J</td>
+<td width="20%" valign="top" align="center">233 B4</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:15-12:10
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. BOHY A</td>
+<td width="20%" valign="top" align="center">0A07 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">15:15-17:10
+<br />(SE)</td>
+<td width="35%" valign="top">
+<u>Calcul des proba et th erreurs</u> Exercices
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. DE CONINCK J</td>
+<td width="20%" valign="top" align="center">233 B4</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>mardi 08/11/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:05
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>Economie politique</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MAHY B
+<br />Mme DUPONT C</td>
+<td width="20%" valign="top" align="center">218</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:15-12:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MENS T</td>
+<td width="20%" valign="top" align="center">18 B6</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">13:15-15:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MENS T</td>
+<td width="20%" valign="top" align="center">3C09 P</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>mercredi 09/11/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Intelligence artificielle</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MELOT H</td>
+<td width="20%" valign="top" align="center">3E20 P</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>jeudi 10/11/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Struct de données II</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">Mme BRUYERE V</td>
+<td width="20%" valign="top" align="center">211 B6</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:15-12:10
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>Intelligence artificielle</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. PUISSANT J-P</td>
+<td width="20%" valign="top" align="center">Escher</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>lundi 14/11/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Calcul des proba et th erreurs</u> anne prparatoire au master en info mons3 bac physique (probabilits)3 bac info
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. DE CONINCK J</td>
+<td width="20%" valign="top" align="center">233 B4</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:15-12:10
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. BOHY A</td>
+<td width="20%" valign="top" align="center">0A07 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">15:15-17:10
+<br />(SE)</td>
+<td width="35%" valign="top">
+<u>Calcul des proba et th erreurs</u> Exercices
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. DE CONINCK J</td>
+<td width="20%" valign="top" align="center">233 B4</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>mardi 15/11/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:05
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>Economie politique</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MAHY B
+<br />Mme DUPONT C</td>
+<td width="20%" valign="top" align="center">218</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:15-12:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MENS T</td>
+<td width="20%" valign="top" align="center">124 B6</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">13:15-15:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MENS T</td>
+<td width="20%" valign="top" align="center">3C09 P</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>mercredi 16/11/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Intelligence artificielle</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MELOT H</td>
+<td width="20%" valign="top" align="center">3E20 P</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>jeudi 17/11/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Struct de données II</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">Mme BRUYERE V</td>
+<td width="20%" valign="top" align="center">211 B6</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:15-12:10
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>Intelligence artificielle</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. PUISSANT J-P</td>
+<td width="20%" valign="top" align="center">Escher</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">13:15-15:10
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. BOHY A</td>
+<td width="20%" valign="top" align="center">3C09 P</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>lundi 21/11/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Calcul des proba et th erreurs</u> anne prparatoire au master en info mons3 bac physique (probabilits)3 bac info
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. DE CONINCK J</td>
+<td width="20%" valign="top" align="center">233 B4</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:15-12:10
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. BOHY A</td>
+<td width="20%" valign="top" align="center">Turing</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">15:15-17:10
+<br />(SE)</td>
+<td width="35%" valign="top">
+<u>Calcul des proba et th erreurs</u> Exercices
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. DE CONINCK J</td>
+<td width="20%" valign="top" align="center">233 B4</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>mardi 22/11/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:05
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>Economie politique</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MAHY B
+<br />Mme DUPONT C</td>
+<td width="20%" valign="top" align="center">218</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">13:15-15:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MENS T</td>
+<td width="20%" valign="top" align="center">124 B6</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>mercredi 23/11/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Intelligence artificielle</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MELOT H</td>
+<td width="20%" valign="top" align="center">3E20 P</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>jeudi 24/11/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Struct de données II</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">Mme BRUYERE V</td>
+<td width="20%" valign="top" align="center">211 B6</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">13:15-15:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. BOHY A</td>
+<td width="20%" valign="top" align="center">Salle Cons Amph</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>lundi 28/11/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Calcul des proba et th erreurs</u> anne prparatoire au master en info mons3 bac physique (probabilits)3 bac info
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. DE CONINCK J</td>
+<td width="20%" valign="top" align="center">233 B4</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:15-12:10
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. BOHY A</td>
+<td width="20%" valign="top" align="center">Turing</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">15:15-17:10
+<br />(SE)</td>
+<td width="35%" valign="top">
+<u>Calcul des proba et th erreurs</u> Exercices
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. DE CONINCK J</td>
+<td width="20%" valign="top" align="center">233 B4</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>mardi 29/11/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">13:15-17:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Projet de génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MENS T</td>
+<td width="20%" valign="top" align="center">Escher</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>mercredi 30/11/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Intelligence artificielle</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MELOT H</td>
+<td width="20%" valign="top" align="center">Salle Cons Amph</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>jeudi 01/12/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Struct de données II</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">Mme BRUYERE V</td>
+<td width="20%" valign="top" align="center">211 B6</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">13:15-15:10
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. BOHY A</td>
+<td width="20%" valign="top" align="center">3C09 P</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>lundi 05/12/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Calcul des proba et th erreurs</u> anne prparatoire au master en info mons3 bac physique (probabilits)3 bac info
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. DE CONINCK J</td>
+<td width="20%" valign="top" align="center">233 B4</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:15-12:10
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. BOHY A</td>
+<td width="20%" valign="top" align="center">Turing</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">15:15-17:10
+<br />(SE)</td>
+<td width="35%" valign="top">
+<u>Calcul des proba et th erreurs</u> Exercices
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. DE CONINCK J</td>
+<td width="20%" valign="top" align="center">233 B4</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>mardi 06/12/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">13:15-17:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Projet de génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MENS T</td>
+<td width="20%" valign="top" align="center">Escher</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>mercredi 07/12/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Intelligence artificielle</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MELOT H</td>
+<td width="20%" valign="top" align="center">3C09 P</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>jeudi 08/12/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Struct de données II</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">Mme BRUYERE V</td>
+<td width="20%" valign="top" align="center">211 B6</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:15-12:10
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>Intelligence artificielle</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. PUISSANT J-P</td>
+<td width="20%" valign="top" align="center">Escher</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">13:15-15:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u> Cours + TP
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MENS T</td>
+<td width="20%" valign="top" align="center">124 B6</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>lundi 12/12/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Calcul des proba et th erreurs</u> anne prparatoire au master en info mons3 bac physique (probabilits)3 bac info
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. DE CONINCK J</td>
+<td width="20%" valign="top" align="center">233 B4</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:15-12:10
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MENS T</td>
+<td width="20%" valign="top" align="center">0A07 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">15:15-17:10
+<br />(SE)</td>
+<td width="35%" valign="top">
+<u>Calcul des proba et th erreurs</u> Exercices
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. DE CONINCK J</td>
+<td width="20%" valign="top" align="center">233 B4</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>mardi 13/12/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">13:15-17:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Projet de génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MENS T</td>
+<td width="20%" valign="top" align="center">Escher</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>mercredi 14/12/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Intelligence artificielle</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MELOT H</td>
+<td width="20%" valign="top" align="center">3E20 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:15-12:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Struct de données II</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">Mme BRUYERE V</td>
+<td width="20%" valign="top" align="center">0A07 P</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>jeudi 15/12/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Struct de données II</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">Mme BRUYERE V</td>
+<td width="20%" valign="top" align="center">0A11 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:15-12:10
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>Intelligence artificielle</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. PUISSANT J-P</td>
+<td width="20%" valign="top" align="center">Escher</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">13:15-15:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u> Cours + TP
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MENS T</td>
+<td width="20%" valign="top" align="center">211 B6</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>lundi 19/12/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Calcul des proba et th erreurs</u> anne prparatoire au master en info mons3 bac physique (probabilits)3 bac info
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. DE CONINCK J</td>
+<td width="20%" valign="top" align="center">233 B4</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:15-12:10
+<br />(TP)</td>
+<td width="35%" valign="top">
+<u>Génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. BOHY A</td>
+<td width="20%" valign="top" align="center">Turing</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">15:15-17:10
+<br />(SE)</td>
+<td width="35%" valign="top">
+<u>Calcul des proba et th erreurs</u> Exercices
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. DE CONINCK J</td>
+<td width="20%" valign="top" align="center">233 B4</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>mardi 20/12/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">13:15-17:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Projet de génie logiciel</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MENS T</td>
+<td width="20%" valign="top" align="center">Escher</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>mercredi 21/12/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Intelligence artificielle</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">M. MELOT H</td>
+<td width="20%" valign="top" align="center">3E20 P</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">10:15-12:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Struct de données II</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">Mme BRUYERE V</td>
+<td width="20%" valign="top" align="center">0A07 P</td>
+</tr>
+<tr>
+<td class="jour" align="left" colspan="4" height="25">
+<b>jeudi 22/12/2011</b>
+</td>
+</tr>
+<tr>
+<td class="jour" height="40" align="center" width="15%" valign="top">08:15-10:10
+<br />(CM)</td>
+<td width="35%" valign="top">
+<u>Struct de données II</u>
+<br />Bac 3 Info (FS)
+<br /></td>
+<td width="30%" valign="top" align="center">Mme BRUYERE V</td>
+<td width="20%" valign="top" align="center">211 B6</td>
+</tr>
+<tr>
+<td class="baspage" align="right" colspan="4" height="25">Doc. 031 (cours) - Doc. 039 (examens)</td>
 </tr>
-</tbody>
 </table>
 </td>
 </tr>
-</tbody>
 </table>
 </body>
 </html>

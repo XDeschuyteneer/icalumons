@@ -1,4 +1,4 @@
-#!/usr/bin/qpython -W ignore::DeprecationWarning
+#!/usr/bin/python -W ignore::DeprecationWarning
 # -*- encoding: utf-8 -*-
 
 from icalendar import Calendar, Event, UTC
@@ -29,56 +29,65 @@ class Date:
 def parse(fichier):
     cours = []
     c = Cours()
-    last_date = ""
-    last_day = ""
+    dernier_jour = ""
+    prof = ""
 
     for ligne in fichier:
-        line = ligne.strip().split('<td valign="top" width="30%" align="center">')
-        if not line[0]:
-            c.prof = line[1].split('</td')[0]
-        tmp = line[0].split('<td valign="top" width="20%" align="center">')
-        tmp = tmp[0].split('<td valign="top" width="35%"><u>')
-        if len(tmp) > 1 and not tmp[0]:
-            c.cours = tmp[1].split("</u>")[0]
-        tmp = line[0].split('"center">')
-        if len(tmp) > 1 and not tmp[0]:
-            heures = tmp[1].split('<br />')[0].split("-")
+        ligne_cours = ligne.split("<u>")
+        ligne_prof = ligne.split('<td width="30%" valign="top" align="center">')
+        ligne_local = ligne.split('<td width="20%" valign="top" align="center">')
+        ligne_date = ligne.split('<b>')
+        ligne_heure = ligne.split('<td class="jour" height="40" align="center" width="15%" valign="top">')
+        ligne_type = ligne.split('<br />')
+
+        if len(ligne_date) == 2:
+            tmp = ligne_date[1].split('</b>\n')[0]
+            if len(tmp.split(" ")) == 2:
+                tmp = tmp.split(" ")
+                date = tmp[1].split("/")
+                if len(date) == 3:
+                    #possibilité d'avoir le jour avec tmp[0]
+                    date = tmp[1].split("/")
+                    dernier_jour = Date(date[0], date[1], date[2])
+        elif len(ligne_heure) == 2:
+            heure = ligne_heure[1].split('\n')[0]
+            heures = heure.split("-")
             c.heures = Heures(heures[0], heures[1])
-        tmp = line[0].split('<td class="jour" colspan="4" height="25" align="left"><b>')
-        if len(tmp) > 1 and not tmp[0]:
-            c.jours = tmp[1]
-            last_day = c.jours
-        tmp = line[0].split('<td valign="top" width="20%" align="center">')
-        if len(tmp) > 1 and not tmp[0]:
-            c.salle = tmp[1].split('</td>')[0]
-            try:
-                c.jours
-            except:
-                c.jours = last_day
-                c.date = last_date
+        elif len(ligne_type) == 2:
+            tmp = ligne_type[1].split('</td>\n')
+            if len(tmp) == 2 and not tmp[1] and tmp[0]:
+                if len(tmp[0]) == 4:
+                    c.type = tmp[0]
+                else:
+                     #mauvais formatage des horaires
+                     prof = tmp[0]
+        elif len(ligne_cours) == 2:
+            nom = ligne_cours[1].split('</u>')[0]
+            c.cours = nom
+        elif len(ligne_prof) == 2:
+            tmp = ligne_prof[1].split('</td>\n')
+            tmp = tmp[0].split('\n')
+            c.prof = tmp[0]
+            prof = ""
+        elif len(ligne_local) == 2:
+            ligne_local = ligne_local[1].split('</td')
+            c.salle = ligne_local[0]
+            c.jour = dernier_jour
+            if prof:
+                c.prof = prof + " - " + c.prof
             cours.append(c)
             c = Cours()
-        tmp = line[0].split('</b></td>')
-        if len(tmp) > 1 and not tmp[1]:
-            tmp = tmp[0].split("/")
-            c.date = Date(tmp[0], tmp[1], tmp[2])
-            last_date = c.date
-        tmp = line[0].split('</td>')
-        if len(tmp) > 1 and not tmp[1]:
-            tmp = tmp[0].split('<br />')
-            if len(tmp) == 1 and len(tmp[0]) == 4:
-                c.type = tmp[0]
     return cours
 
 def construct_cal(cours):
     cal = Calendar()
     cal.add('prodid', "My cal")
     cal.add('version', "0.1")
-    
+
     lessons = list(set(map((lambda c: c.type + " - " + c.cours), cours)))
     ids = range(len(lessons))
     dico = dict(zip(lessons,ids))
-        
+
     for c in cours:
         if not (dico[c.type + " - " + c.cours] in ids_to_delete):
             event = Event()
@@ -101,9 +110,9 @@ def main():
     if only_show_lessons:
         lessons = list(set(map((lambda c: c.type + " - " + c.cours), cours)))
         for i, lesson in enumerate(lessons):
-            print i, ")", lesson 
+            print i, ")", lesson
     else:
-        cal = construct_cal(cours)     
+        cal = construct_cal(cours)
         directory = tempfile.mkdtemp()
         f = open(output, 'wb')
         f.write(cal.as_string())
@@ -119,7 +128,7 @@ def usage():
     print "\t-F, --filter\tparser -f 1-4-5 delete lessons with ID 1,4 and 5"
     print "\t-f, --file\t\tpath to the html file"
     print "\t-o, --output\tpath to the ics file to render, if not specified, write in the cal.ics file, in the current directory"
-    
+
 if __name__ == "__main__":
     try:
         opts, args = getopt.getopt(sys.argv[1:], "hlf:F:o:",
@@ -151,7 +160,16 @@ if __name__ == "__main__":
         else:
             assert False, "unhandled option"
     if file:
-        main()
+        #main()
+        cours = parse(open(file))
+        for c in cours:
+            #print c.prof
+            #print c.salle
+            #print c.jour.d
+            #print c.heures.start.h, c.heures.start.m
+            print c.prof
+            #print c.cours
+            #pass
     else:
         print "need an input file, type --help or -h for help"
         sys.exit(0)

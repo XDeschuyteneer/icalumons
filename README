@@ -1,17 +1,11 @@
-This program serves to render an ics file with a normalized html file from there:
-https://applications.umons.ac.be/horaires/
+the goal of this project is to render your lessons from:
+    https://applications.umons.ac.be/horaires/
+into ics file
 
-type: parser -h or parser --help for more help
+dependencies: 
+	http://codespeak.net/icalendar/
+	http://utidylib.berlios.de/) available as python-utidylib Debian package.
 
-exple:
-	List all the courses with their ID's:
-	     parser -l -f index.html
-
-	Render the ics file (default place: cal.ics in the current directory):
-	     parser -f index.html 
-
-	Render an ics file named my_cal.ics:
-	     parser -f index.html -o my_cal.ics
-
-	Render an ics file without lessons having 1 or 3 or 7 as ID:
-	     parser -f index.html -o my_cal.ics -F 1-2-7
+use:
+	umonstimesheetgrabber to download the html file
+	parser to parse the html file and create the ics file
