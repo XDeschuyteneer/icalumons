@@ -5,6 +5,8 @@ from icalendar import Calendar, Event, UTC
 from datetime import datetime
 import tempfile, os, sys, getopt
 
+
+
 class Cours:
     def __init__(self):
         pass
@@ -91,7 +93,9 @@ def construct_cal(cours):
     for c in cours:
         if not (dico[c.type + " - " + c.cours] in ids_to_delete):
             event = Event()
-            event.add('summary', c.type + " - " + c.cours)
+            intitule = c.type + " - " + c.cours
+            print intitule
+            event.add('summary', intitule)
             d = c.date
             h = c.heures.start
             event.add('dtstart', datetime(d.y, d.m, d.d,
@@ -160,16 +164,7 @@ if __name__ == "__main__":
         else:
             assert False, "unhandled option"
     if file:
-        #main()
-        cours = parse(open(file))
-        for c in cours:
-            #print c.prof
-            #print c.salle
-            #print c.jour.d
-            #print c.heures.start.h, c.heures.start.m
-            print c.prof
-            #print c.cours
-            #pass
+        main()
     else:
         print "need an input file, type --help or -h for help"
         sys.exit(0)
