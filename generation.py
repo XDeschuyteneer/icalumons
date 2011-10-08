@@ -2,7 +2,7 @@
 # -*- encoding: utf-8 -*-
 
 # File: generation
-#   Time-stamp: <2011-10-08 04:00:41 gawen>
+#   Time-stamp: <2011-10-08 04:02:02 gawen>
 #
 #   Copyright (C) 2011
 #            Xavier Deschuyteneer <xavier.deschuyteneer@clubinfo-umons.be>
@@ -289,7 +289,6 @@ if __name__ == "__main__":
 
 
     tmp = tempfile.mkdtemp()
-    tmp = "./tmp"
     mkdir(path.join(tmp, "html"))
     mkdir(path.join(tmp, "ics"))
     mkdir(path.join(tmp, "www"))
@@ -321,7 +320,7 @@ if __name__ == "__main__":
             shutil.move(indexpath, www)
             shutil.move(icspath, www)
     except:
-        #shutil.rmtree(tmp)
+        shutil.rmtree(tmp)
         raise
-    #shutil.rmtree(tmp)
+    shutil.rmtree(tmp)
 
