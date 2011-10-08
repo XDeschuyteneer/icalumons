@@ -166,18 +166,31 @@ def main():
     """
     Open the file, parse the file, construct the calendar and write it.
     """
+    if verbose:
+        print "Begining the construction"
+        print "\t- opening the file %s" % (file)
     fichier = open(file)
+    if verbose:
+        print "\t- parsing the file"
     cours = parse(fichier)
+    if verbose:
+        print "\t- find %i events" % (len(cours))
     if only_show_lessons:
         lessons = list(set(map((lambda c: c.type + " - " + c.cours), cours)))
         for i, lesson in enumerate(lessons):
             print i, ")", lesson
     else:
+        if verbose:
+            print "\t- making the ics"
         cal = construct_cal(cours, ids_to_delete)
         directory = tempfile.mkdtemp()
         f = open(output, 'wb')
+        if verbose:
+            print "\t- writing the ics to %s" % (output)
         f.write(cal.as_string())
         f.close()
+        if verbose:
+            print "Done"
 
 
 def usage():
@@ -192,8 +205,8 @@ def usage():
 
 if __name__ == "__main__":
     try:
-        opts, args = getopt.getopt(sys.argv[1:], "hlf:F:o:",
-                                   ["help", "list", "filter","file","output"])
+        opts, args = getopt.getopt(sys.argv[1:], "hvlf:F:o:",
+                                   ["help", "help", "list", "filter", "file","output"])
     except getopt.GetoptError, err:
         print str(err)
         usage()
@@ -202,9 +215,11 @@ if __name__ == "__main__":
     global ids
     global file
     global output
+    global verbose
     only_show_lessons = False
     ids_to_delete = []
     file = ""
+    verbose = False
     output = "cal.ics"
     for o, a in opts:
         if o in ("-h", "--help"):
@@ -218,6 +233,8 @@ if __name__ == "__main__":
             file = a
         elif o in ("-o", "--output"):
             output = a
+        elif o in ("-v", "--verbose"):
+            verbose = True
         else:
             assert False, "unhandled option"
     if file:
