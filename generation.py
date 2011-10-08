@@ -2,7 +2,7 @@
 # -*- encoding: utf-8 -*-
 
 # File: generation
-#   Time-stamp: <2011-10-08 03:58:03 gawen>
+#   Time-stamp: <2011-10-08 04:00:41 gawen>
 #
 #   Copyright (C) 2011
 #            Xavier Deschuyteneer <xavier.deschuyteneer@clubinfo-umons.be>
@@ -288,11 +288,11 @@ if __name__ == "__main__":
         setup()
 
 
-    #tmp = tempfile.mkdtemp()
+    tmp = tempfile.mkdtemp()
     tmp = "./tmp"
-#    mkdir(path.join(tmp, "html"))
+    mkdir(path.join(tmp, "html"))
     mkdir(path.join(tmp, "ics"))
-#    mkdir(path.join(tmp, "www"))
+    mkdir(path.join(tmp, "www"))
 
     try:
         p = ParserFetcher(tmp, list_formations)
