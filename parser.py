@@ -22,8 +22,7 @@
 #   You should have received a copy of the GNU General Public License
 #   along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-from icalendar import Calendar, Event, UTC
-from datetime import datetime
+from ical import iDate, Event, iCal
 import tempfile, os, sys, getopt, pytz
 
 #some objects to make it easier to use
@@ -132,34 +131,31 @@ def construct_cal(cours, ids_to_delete):
     Take a list of Cours objects and return an ics calendar object.
     It take care of the filter.
     """
-    cal = Calendar()
-    cal.add('prodid', "My cal")
-    cal.add('version', "0.1")
+    cal = iCal("My cal", 0.1)
 
     lessons = list(set(map((lambda c: c.type + " - " + c.cours), cours)))
     ids = range(len(lessons))
     dico = dict(zip(lessons,ids))
 
-    timezone = pytz.timezone("Europe/Brussels")
 
     for c in cours:
         if not (dico[c.type + " - " + c.cours] in ids_to_delete):
             event = Event()
             intitule = c.type + " - " + c.cours
-            event.add('summary', intitule, encode=0)
+            event['summary'] =  intitule
             d = c.date
             h = c.heures.start
-            event.add('dtstart', datetime(d.y, d.m, d.d,
-                                          h.h, h.m, 0,tzinfo=timezone))
+            date = iDate(d.y, d.m, d.d, h.h, h.m)
+            event['dtstart'] = date
             h = c.heures.end
-            event.add('dtend',datetime(d.y, d.m, d.d,
-                                       h.h, h.m, 0,tzinfo=timezone))
-            event.add('organizer', c.prof, encode=0)
-            event.add('location', c.salle, encode=0)
+            date = iDate(d.y, d.m, d.d, h.h, h.m)
+            event['dtend'] = date
+            event['organizer'] =  c.prof
+            event['location'] = c.salle
             # set the uid of this event to the hash of the repr of the object
             # useful for update/delete, and so on
             event['uid'] = hash(str(c))
-            cal.add_component(event)
+            cal.add(event)
     return cal
 
 def main():
@@ -183,12 +179,9 @@ def main():
         if verbose:
             print "\t- making the ics"
         cal = construct_cal(cours, ids_to_delete)
-        directory = tempfile.mkdtemp()
-        f = open(output, 'wb')
         if verbose:
             print "\t- writing the ics to %s" % (output)
-        f.write(cal.as_string())
-        f.close()
+        cal.write(output)
         if verbose:
             print "Done"
 

@@ -3,10 +3,8 @@ the goal of this project is to render your lessons from:
 into ics file
 
 dependencies: 
-	http://codespeak.net/icalendar/
-	http://utidylib.berlios.de/ available as python-utidylib Debian package.
-	http://pytz.sourceforge.net/ available as python-tz Debian package. 
-
+		http://utidylib.berlios.de/ available as python-utidylib Debian package.
+	
 use:
 	umonstimesheetgrabber to download the html file
 	parser to parse the html file and create the ics file
