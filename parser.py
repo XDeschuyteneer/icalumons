@@ -31,11 +31,11 @@ import tempfile, os, sys, getopt, pytz
 class Cours:
     def __init__(self):
         self.date = None
-        self.type = None
+        self.type = "--"
         self.heures = None
-        self.prof = None
-        self.salle = None
-        self.cours = None
+        self.prof = "--"
+        self.salle = "--"
+        self.cours = "--"
 
     def __str__(self):
         return (str(self.date) + "\n" +
@@ -79,7 +79,7 @@ def parse(fichier):
     c = Cours()
     dernier_jour = ""
     prof = ""
-
+    
     for ligne in fichier:
         ligne_cours = ligne.split("<u>")
         ligne_prof = ligne.split('<td width="30%" valign="top" align="center">')
@@ -127,7 +127,7 @@ def parse(fichier):
             c = Cours()
     return cours
 
-def construct_cal(cours):
+def construct_cal(cours, ids_to_delete):
     """
     Take a list of Cours objects and return an ics calendar object.
     It take care of the filter.
@@ -173,7 +173,7 @@ def main():
         for i, lesson in enumerate(lessons):
             print i, ")", lesson
     else:
-        cal = construct_cal(cours)
+        cal = construct_cal(cours, ids_to_delete)
         directory = tempfile.mkdtemp()
         f = open(output, 'wb')
         f.write(cal.as_string())
